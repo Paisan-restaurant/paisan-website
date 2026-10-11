@@ -46,7 +46,7 @@ const navItems = [
 const jsonLd = {
   "@context": "https://schema.org", "@type": "Restaurant",
   name: "Paisan Hilversum", url: SITE + "/",
-  image: SITE + "/assets/img/mezze-tafel.jpg",
+  image: SITE + "/assets/img/tuin-overzicht.jpg",
   telephone: "+31355447075", email: "info@paisanhilversum.nl",
   servesCuisine: ["Mediterraans", "Midden-Oosters"], priceRange: "€€",
   acceptsReservations: "True", menu: SITE + "/menu",
@@ -124,7 +124,7 @@ const layout = (p, body) => `<!doctype html>
 <meta property="og:title" content="${p.title}">
 <meta property="og:description" content="${p.desc}">
 <meta property="og:url" content="${SITE}/${p.out}">
-<meta property="og:image" content="${SITE}/assets/img/mezze-tafel.jpg">
+<meta property="og:image" content="${SITE}/assets/img/tuin-overzicht.jpg">
 <meta property="og:locale" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="google-site-verification" content="IzBnSYQndCLuVm6DvSpl85SfTpxATmgmo4MJ9K1mHrU">
