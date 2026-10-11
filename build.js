@@ -107,7 +107,11 @@ const footer = `
     <p class="legal">© ${new Date().getFullYear()} Paisan B.V. · Naarderstraat 7, Hilversum</p>
   </div>
 </footer>
+<!-- Zenchef Widget SDK: knoppen met data-zc-action="open" openen het reserveervenster; zonder SDK werkt de gewone link -->
+<script>;(function (d, s, id) {const el = d.getElementsByTagName(s)[0]; if (d.getElementById(id) || el.parentNode == null) {return;} var js = d.createElement(s);  js.id = id; js.async = true; js.src = 'https://sdk.zenchef.com/v1/sdk.min.js'; js.onload = function(){ window.__zcReady = true; }; el.parentNode.insertBefore(js, el); })(document, 'script', 'zenchef-sdk')</script>
+<div class="zc-widget-config" data-restaurant="380945"></div>
 <script>
+  document.addEventListener('click',function(e){var a=e.target.closest('a[data-zc-action="open"]');if(a&&window.__zcReady){e.preventDefault();}});
   const t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
   t&&t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);t.textContent=o?'Sluiten':'Menu';});
 </script>`;
@@ -154,7 +158,7 @@ for (const p of pages) {
   body = body.replaceAll("{{RESERVE}}", RESERVE).replace(/\{\{IMG:([^}|]+)(?:\|(\d+))?\}\}/g, (_, id, w) => IMG(id, w ? +w : 1600));
   const outDir = path.join(dist, p.out);
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, "index.html"), layout(p, body));
+  fs.writeFileSync(path.join(outDir, "index.html"), layout(p, body).replaceAll(`href="${RESERVE}"`, `href="${RESERVE}" data-zc-action="open"`));
 }
 
 fs.writeFileSync(path.join(dist, "sitemap.xml"),
