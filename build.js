@@ -12,28 +12,28 @@ const pages = [
   { file: "index", out: "", nav: "",
     title: "Paisan Hilversum | Mediterrane bar, restaurant en stadstuin",
     desc: "Mediterrane mezzes om te delen, een grote zonnige stadstuin met jeu de boules en een bar in hartje Hilversum. Elke dag open vanaf 10:00." },
-  { file: "menu", out: "menu", nav: "menu",
+  { file: "menu", motif: "bestek-licht", out: "menu", nav: "menu",
     title: "Menukaart | Paisan Hilversum",
     desc: "Bekijk de dagkaart en avondkaart van Paisan: mediterrane mezzes om te delen, met invloeden uit het Midden-Oosten." },
-  { file: "groepen", out: "groepen", nav: "groepen",
+  { file: "groepen", motif: "wijnglas-licht", out: "groepen", nav: "groepen",
     title: "Groepen en besloten feesten | Paisan Hilversum",
     desc: "Dineren, borrelen of feesten met 20 tot 200 gasten in onze bar, het restaurant of de stadstuin. Mezze- en Balagan-arrangementen vanaf €35 p.p." },
-  { file: "evenementen", out: "evenementen", nav: "evenementen",
+  { file: "evenementen", motif: "cocktail-licht", out: "evenementen", nav: "evenementen",
     title: "Evenementen | Paisan Hilversum",
     desc: "Brunch met DJ, Dinner Party's met mezzes en meer: dit is er binnenkort te doen bij Paisan in Hilversum." },
-  { file: "jeu-de-boules", out: "jeu-de-boules", nav: "jeu-de-boules",
+  { file: "jeu-de-boules", motif: "boom-licht", out: "jeu-de-boules", nav: "jeu-de-boules",
     title: "Jeu de boules in de stadstuin | Paisan Hilversum",
     desc: "Reserveer een jeu de boules-baan in onze stadstuin in hartje Hilversum, voor €25 per uur, met een drankje van de buitenbar." },
-  { file: "over-ons", out: "over-ons", nav: "over-ons",
+  { file: "over-ons", motif: "wijnvrouw-licht", out: "over-ons", nav: "over-ons",
     title: "Over ons | Paisan Hilversum",
     desc: "Paisan is van Koen en David: een bar, restaurant en stadstuin aan de Naarderstraat waar je binnenkomt als gast en vertrekt als vriend." },
-  { file: "contact", out: "contact", nav: "contact",
+  { file: "contact", motif: "krans-licht", out: "contact", nav: "contact",
     title: "Contact en route | Paisan Hilversum",
     desc: "Paisan, Naarderstraat 7, 1211 AH Hilversum. Bel 035 544 70 75 of mail info@paisanhilversum.nl. Elke dag open vanaf 10:00." },
-  { file: "werkenbij", out: "werkenbij", nav: "werkenbij",
+  { file: "werkenbij", motif: "bestek-licht", out: "werkenbij", nav: "werkenbij",
     title: "Werken bij Paisan | Vacatures in Hilversum",
     desc: "Werken in de keuken of bediening van Paisan? We staan altijd open voor ervaren, gemotiveerde mensen, zeker richting het zomerseizoen." },
-  { file: "bedankt", out: "groepen/bedankt", nav: "groepen", noindex: true,
+  { file: "bedankt", motif: "krans-licht", out: "groepen/bedankt", nav: "groepen", noindex: true,
     title: "Bedankt voor je aanvraag | Paisan Hilversum",
     desc: "We hebben je groepsaanvraag ontvangen." },
 ];
@@ -46,7 +46,7 @@ const navItems = [
 const jsonLd = {
   "@context": "https://schema.org", "@type": "Restaurant",
   name: "Paisan Hilversum", url: SITE + "/",
-  image: SITE + "/assets/img/tuin-overzicht.jpg",
+  image: SITE + "/assets/img/mezze-tafel.jpg",
   telephone: "+31355447075", email: "info@paisanhilversum.nl",
   servesCuisine: ["Mediterraans", "Midden-Oosters"], priceRange: "€€",
   acceptsReservations: "True", menu: SITE + "/menu",
@@ -69,7 +69,8 @@ const header = (cur) => `
 </header>`;
 
 const footer = `
-<footer class="site-footer">
+<footer class="site-footer has-motif">
+  <img class="motif m-foot" src="/assets/motif/krans-licht.png" alt="" aria-hidden="true" loading="lazy">
   <div class="wrap">
     <div class="footer-grid">
       <div>
@@ -128,7 +129,7 @@ const layout = (p, body) => `<!doctype html>
 <meta property="og:title" content="${p.title}">
 <meta property="og:description" content="${p.desc}">
 <meta property="og:url" content="${SITE}/${p.out}">
-<meta property="og:image" content="${SITE}/assets/img/tuin-overzicht.jpg">
+<meta property="og:image" content="${SITE}/assets/img/mezze-tafel.jpg">
 <meta property="og:locale" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="google-site-verification" content="IzBnSYQndCLuVm6DvSpl85SfTpxATmgmo4MJ9K1mHrU">
@@ -155,6 +156,7 @@ fs.cpSync(path.join(__dirname, "static"), dist, { recursive: true });
 
 for (const p of pages) {
   let body = fs.readFileSync(path.join(__dirname, "src/pages", p.file + ".html"), "utf8");
+  if (p.motif) body = body.replace('<div class="page-hero">', `<div class="page-hero has-motif"><img class="motif m-page" src="/assets/motif/${p.motif}.png" alt="" aria-hidden="true">`);
   body = body.replaceAll("{{RESERVE}}", RESERVE).replace(/\{\{IMG:([^}|]+)(?:\|(\d+))?\}\}/g, (_, id, w) => IMG(id, w ? +w : 1600));
   const outDir = path.join(dist, p.out);
   fs.mkdirSync(outDir, { recursive: true });
