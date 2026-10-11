@@ -1,0 +1,26 @@
+[build]
+  command = "node build.js"
+  publish = "dist"
+
+# Oude Framer-URL's van de losse vacatures naar de vacaturepagina
+[[redirects]]
+  from = "/zelfstandigwerkendkok"
+  to = "/werkenbij"
+  status = 301
+[[redirects]]
+  from = "/leidinggevendebediening"
+  to = "/werkenbij"
+  status = 301
+[[redirects]]
+  from = "/souschef"
+  to = "/werkenbij"
+  status = 301
+[[redirects]]
+  from = "/werken-bij"
+  to = "/werkenbij"
+  status = 301
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

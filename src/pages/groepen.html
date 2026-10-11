@@ -1,0 +1,72 @@
+<div class="page-hero">
+  <div class="wrap">
+    <h1>Met een groep naar Paisan</h1>
+    <p>Van 20 tot 200 gasten, in de bar, het restaurant of de stadstuin.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap split">
+    <div class="split-media"><div class="arch"><img src="/assets/img/groep-tafel.jpg" alt="Een tafel met gedeelde gerechten" loading="lazy" width="1000" height="1500"></div></div>
+    <div>
+      <h2>Een plek voor elke gelegenheid</h2>
+      <p class="lead">Een borrel aan de bar, een uitgebreid diner in het restaurant of een middag in de tuin: we hebben verschillende ruimtes, dus er is altijd een plek die bij jullie past.</p>
+      <ul>
+        <li>Groepen van 20 tot 200 gasten</li>
+        <li>Lunch, borrel, diner of een combinatie</li>
+        <li>Een privéruimte in onze bar</li>
+        <li>Goed bereikbaar met het openbaar vervoer</li>
+      </ul>
+      <p>Liever eerst de locatie zien? Plan een afspraak, dan lopen we samen een rondje.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Arrangementen</h2>
+    <p>Met een arrangement ligt alles van tevoren vast en kunnen jullie onbezorgd genieten.</p>
+    <div class="offers">
+      <div class="offer">
+        <h3>Mezze-menu</h3>
+        <div class="price">Vanaf €35 p.p.</div>
+        <p>Een selectie van onze mezzes, samen gedeeld aan tafel. Een goede keuze voor een ontspannen diner of een uitgebreide lunch.</p>
+      </div>
+      <div class="offer">
+        <h3>Balagan-menu</h3>
+        <div class="price">Vanaf €45 p.p.</div>
+        <p>De keuken kiest voor jullie: gang na gang komen er gerechten op tafel om te delen. Ons ruimste menu, voor wie zich graag laat verrassen.</p>
+      </div>
+      <div class="offer">
+        <h3>Drankarrangement</h3>
+        <div class="price">Op aanvraag</div>
+        <p>Maak je menu compleet met een drankarrangement. We stemmen het graag af op jullie gezelschap.</p>
+      </div>
+    </div>
+    <p style="margin-top:28px"><a class="btn btn-line" href="https://framerusercontent.com/assets/i7aoj0qrkWtRnGMxmjsvJisy7w.pdf">Download alle groepsmenu's (pdf)</a></p>
+  </div>
+</section>
+
+<section id="aanvraag">
+  <div class="wrap">
+    <h2>Vraag een offerte aan</h2>
+    <p>Vertel ons wat je in gedachten hebt. We nemen zo snel mogelijk contact met je op met een voorstel op maat.</p>
+    <form class="form" name="groepsaanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/groepen/bedankt">
+      <input type="hidden" name="form-name" value="groepsaanvraag">
+      <p class="hidden"><label>Niet invullen <input name="bot-field"></label></p>
+      <div><label for="naam">Naam</label><input id="naam" name="naam" autocomplete="name" required></div>
+      <div><label for="bedrijf">Bedrijf (optioneel)</label><input id="bedrijf" name="bedrijf" autocomplete="organization"></div>
+      <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="telefoon">Telefoon</label><input id="telefoon" name="telefoon" type="tel" autocomplete="tel"></div>
+      <div><label for="datum">Datum</label><input id="datum" name="datum" type="date" required></div>
+      <div><label for="gasten">Aantal gasten</label><input id="gasten" name="gasten" type="number" min="1" inputmode="numeric" required></div>
+      <div><label for="soort">Soort gelegenheid</label>
+        <select id="soort" name="soort"><option>Diner</option><option>Lunch</option><option>Borrel</option><option>Besloten feest</option><option>Zakelijk</option><option>Anders</option></select></div>
+      <div><label for="arrangement">Interesse in</label>
+        <select id="arrangement" name="arrangement"><option>Nog geen idee</option><option>Mezze-menu</option><option>Balagan-menu</option><option>Borrel</option><option>Jeu de boules</option></select></div>
+      <div class="full"><label for="wensen">Wensen of vragen</label><textarea id="wensen" name="wensen"></textarea></div>
+      <div class="full"><button class="btn btn-red" type="submit">Verstuur aanvraag</button>
+        <p class="hint">Liever mailen? Stuur je wensen naar <a href="mailto:info@paisanhilversum.nl">info@paisanhilversum.nl</a>.</p></div>
+    </form>
+  </div>
+</section>
