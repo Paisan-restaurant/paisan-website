@@ -59,8 +59,8 @@ p{margin:0 0 1em;max-width:62ch}
 .hero p{font-size:1.3rem;color:var(--cream);opacity:.92}
 .hero-copy{padding-bottom:64px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.hero-actions .btn-line{color:var(--cream)}
-.hero-actions .btn-line:hover{background:var(--cream);color:var(--red);border-color:var(--cream)}
+.hero .hero-actions .btn-line{color:var(--cream)}
+.hero .hero-actions .btn-line:hover{background:var(--cream);color:var(--red);border-color:var(--cream)}
 .arch{border-radius:var(--arch);overflow:hidden;background:var(--sand)}
 .arch img{width:100%;height:100%;object-fit:cover}
 .hero .arch{aspect-ratio:4/5;border:10px solid var(--sand);border-bottom:0;border-radius:999px 999px 0 0}
