@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 const SITE = "https://www.paisanhilversum.nl";
+const RESERVE_BAR = "mailto:info@paisanhilversum.nl?subject=Reservering%20Balagan%20Bar"; // tijdelijk, tot de Zenchef-code van de bar er is
 const RESERVE = "https://bookings.zenchef.com/results?rid=380945&pid=1001";
 // Beeld staat voorlopig nog op de Framer-CDN; vóór livegang naar /assets/img verplaatsen.
 const IMG = (id, w = 1600) => `https://framerusercontent.com/images/${id}?scale-down-to=${w}`;
@@ -12,6 +13,9 @@ const pages = [
   { file: "index", out: "", nav: "",
     title: "Paisan Hilversum | Mediterrane bar, restaurant en stadstuin",
     desc: "Mediterrane mezzes om te delen, een grote zonnige stadstuin met jeu de boules en een bar in hartje Hilversum. Elke dag open vanaf 10:00." },
+  { file: "balagan-bar", motif: "wijnglas-licht", out: "balagan-bar", nav: "balagan-bar",
+    title: "De Balagan Bar | Paisan Hilversum, Groest 16",
+    desc: "De Balagan Bar aan de Groest 16 in Hilversum: het Balagan-menu om te delen, cocktails en een semi-privé plek voor groepen tot 22 personen. Elke dag vanaf 17:00." },
   { file: "menu", motif: "bestek-licht", out: "menu", nav: "menu",
     title: "Menukaart | Paisan Hilversum",
     desc: "Bekijk de dagkaart en avondkaart van Paisan: mediterrane mezzes om te delen, met invloeden uit het Midden-Oosten." },
@@ -39,7 +43,7 @@ const pages = [
 ];
 
 const navItems = [
-  ["menu", "Menu"], ["groepen", "Groepen"], ["evenementen", "Evenementen"],
+  ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["evenementen", "Evenementen"],
   ["jeu-de-boules", "Jeu de boules"], ["over-ons", "Over ons"], ["contact", "Contact"],
 ];
 
@@ -80,14 +84,15 @@ const footer = `
       <div>
         <h2>Bezoek ons</h2>
         <ul>
-          <li>Naarderstraat 7<br>1211 AH Hilversum</li>
+          <li><strong>Restaurant</strong><br>Naarderstraat 7, 1211 AH Hilversum</li>
+          <li><strong>Balagan Bar</strong><br>Groest 16, Hilversum</li>
           <li><a href="tel:+31355447075">035 544 70 75</a></li>
           <li><a href="mailto:info@paisanhilversum.nl">info@paisanhilversum.nl</a></li>
         </ul>
       </div>
       <div>
         <h2>Openingstijden</h2>
-        <ul><li>Elke dag vanaf 10:00 tot laat</li><li>Keuken: ma–vr tot 21:00, za en zo tot 22:00</li></ul>
+        <ul><li>Restaurant: elke dag vanaf 10:00</li><li>Keuken: ma–vr tot 21:00, za en zo tot 22:00</li><li>Balagan Bar: elke dag vanaf 17:00</li></ul>
         <h2 style="margin-top:1em">Direct naar</h2>
         <ul>
           <li><a href="${RESERVE}">Reserveren</a></li>
@@ -157,7 +162,7 @@ fs.cpSync(path.join(__dirname, "static"), dist, { recursive: true });
 for (const p of pages) {
   let body = fs.readFileSync(path.join(__dirname, "src/pages", p.file + ".html"), "utf8");
   if (p.motif) body = body.replace('<div class="page-hero">', `<div class="page-hero has-motif"><img class="motif m-page" src="/assets/motif/${p.motif}.png" alt="" aria-hidden="true">`);
-  body = body.replaceAll("{{RESERVE}}", RESERVE).replace(/\{\{IMG:([^}|]+)(?:\|(\d+))?\}\}/g, (_, id, w) => IMG(id, w ? +w : 1600));
+  body = body.replaceAll("{{RESERVE_BAR}}", RESERVE_BAR).replaceAll("{{RESERVE}}", RESERVE).replace(/\{\{IMG:([^}|]+)(?:\|(\d+))?\}\}/g, (_, id, w) => IMG(id, w ? +w : 1600));
   const outDir = path.join(dist, p.out);
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "index.html"), layout(p, body).replaceAll(`href="${RESERVE}"`, `href="${RESERVE}" data-zc-action="open"`));
