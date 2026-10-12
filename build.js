@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 const SITE = "https://www.paisanhilversum.nl";
-const RESERVE_BAR = "mailto:info@paisanhilversum.nl?subject=Reservering%20Balagan%20Bar"; // tijdelijk, tot de Zenchef-code van de bar er is
+const RESERVE_BAR = RESERVE; // Balagan Bar-ticket staat in dezelfde Zenchef
 const RESERVE = "https://bookings.zenchef.com/results?rid=380945&pid=1001";
 // Beeld staat voorlopig nog op de Framer-CDN; vóór livegang naar /assets/img verplaatsen.
 const IMG = (id, w = 1600) => `https://framerusercontent.com/images/${id}?scale-down-to=${w}`;
