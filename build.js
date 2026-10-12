@@ -11,8 +11,8 @@ const IMG = (id, w = 1600) => `https://framerusercontent.com/images/${id}?scale-
 
 const pages = [
   { file: "index", out: "", nav: "",
-    title: "Paisan Hilversum | Mediterrane bar, restaurant en stadstuin",
-    desc: "Mediterrane mezzes om te delen, een grote zonnige stadstuin met jeu de boules en een bar in hartje Hilversum. Elke dag open vanaf 10:00." },
+    title: "Paisan Hilversum | Mediterraan restaurant en Balagan Bar",
+    desc: "Mediterrane gerechten om te delen in hartje Hilversum: ons restaurant aan de Naarderstraat, de hele dag open, en de Balagan Bar met DJ, Boozy Sunday Brunch en ruimte voor groepen." },
   { file: "balagan-bar", out: "balagan-bar", nav: "balagan-bar",
     title: "De Balagan Bar | DJ, Balagan en groepen in Hilversum",
     desc: "De Balagan Bar van Paisan aan de Groest 16: het Balagan-menu om te delen, DJ op zaterdag, Boozy Sunday Brunch en drie ruimtes voor groepen tot 70 gasten aan tafel." },
@@ -21,7 +21,7 @@ const pages = [
     desc: "Bekijk de dagkaart en avondkaart van Paisan: mediterrane mezzes om te delen, met invloeden uit het Midden-Oosten." },
   { file: "groepen", motif: "wijnglas-licht", out: "groepen", nav: "groepen",
     title: "Groepen en besloten feesten | Paisan Hilversum",
-    desc: "Dineren, borrelen of feesten met 20 tot 200 gasten in onze bar, het restaurant of de stadstuin. Mezze- en Balagan-arrangementen vanaf €35 p.p." },
+    desc: "Dineren, borrelen of feesten met 20 tot 200 gasten in het restaurant of de Balagan Bar. Mezze- en Balagan-arrangementen vanaf €35 p.p." },
   { file: "evenementen", motif: "cocktail-licht", out: "evenementen", nav: "evenementen",
     title: "Evenementen | Paisan Hilversum",
     desc: "Brunch met DJ, Dinner Party's met mezzes en meer: dit is er binnenkort te doen bij Paisan in Hilversum." },
@@ -44,7 +44,7 @@ const pages = [
 
 const navItems = [
   ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["evenementen", "Evenementen"],
-  ["jeu-de-boules", "Jeu de boules"], ["over-ons", "Over ons"], ["contact", "Contact"],
+  ["over-ons", "Over ons"], ["contact", "Contact"],
 ];
 
 const jsonLd = {
@@ -79,7 +79,7 @@ const footer = `
     <div class="footer-grid">
       <div>
         <a class="wordmark" href="/"><img src="/assets/img/logo-sand.png" alt="Paisan" width="640" height="287"></a>
-        <p>Bar, restaurant en stadstuin in hartje Hilversum.</p>
+        <p>Restaurant en Balagan Bar in hartje Hilversum.</p>
       </div>
       <div>
         <h2>Bezoek ons</h2>
