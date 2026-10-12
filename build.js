@@ -12,12 +12,18 @@ const pages = [
   { file: "index", out: "", nav: "",
     title: "Paisan Hilversum | Mediterrane bar, restaurant en stadstuin",
     desc: "Mediterrane mezzes om te delen, een grote zonnige stadstuin met jeu de boules en een bar in hartje Hilversum. Elke dag open vanaf 10:00." },
+  { file: "restaurant", motif: "bestek-licht", out: "restaurant", nav: "restaurant",
+    title: "Restaurant à la carte | Paisan Hilversum",
+    desc: "Dineren à la carte in ons restaurant aan de Naarderstraat 7 in Hilversum: mediterrane keuken met invloeden uit het Midden-Oosten, binnen of in de stadstuin." },
+  { file: "balagan-bar", motif: "cocktail-licht", out: "balagan-bar", nav: "balagan-bar",
+    title: "Balagan Bar | Borrelen en semi-privé groepen in Hilversum",
+    desc: "De Balagan Bar van Paisan aan de Groest 16 in Hilversum: borrelen met een drankje en hapjes uit onze keuken, en semi-privé voor groepen tot ongeveer 22 gasten." },
   { file: "menu", motif: "bestek-licht", out: "menu", nav: "menu",
     title: "Menukaart | Paisan Hilversum",
     desc: "Bekijk de dagkaart en avondkaart van Paisan: mediterrane mezzes om te delen, met invloeden uit het Midden-Oosten." },
   { file: "groepen", motif: "wijnglas-licht", out: "groepen", nav: "groepen",
     title: "Groepen en besloten feesten | Paisan Hilversum",
-    desc: "Dineren, borrelen of feesten met 20 tot 200 gasten in onze bar, het restaurant of de stadstuin. Mezze- en Balagan-arrangementen vanaf €35 p.p." },
+    desc: "Dineren, borrelen of feesten met 20 tot 200 gasten: semi-privé in de Balagan Bar, in het restaurant of in de stadstuin. Mezze- en Balagan-arrangementen vanaf €35 p.p." },
   { file: "evenementen", motif: "cocktail-licht", out: "evenementen", nav: "evenementen",
     title: "Evenementen | Paisan Hilversum",
     desc: "Brunch met DJ, Dinner Party's met mezzes en meer: dit is er binnenkort te doen bij Paisan in Hilversum." },
@@ -29,7 +35,7 @@ const pages = [
     desc: "Paisan is van Koen en David: een bar, restaurant en stadstuin aan de Naarderstraat waar je binnenkomt als gast en vertrekt als vriend." },
   { file: "contact", motif: "krans-licht", out: "contact", nav: "contact",
     title: "Contact en route | Paisan Hilversum",
-    desc: "Paisan, Naarderstraat 7, 1211 AH Hilversum. Bel 035 544 70 75 of mail info@paisanhilversum.nl. Elke dag open vanaf 10:00." },
+    desc: "Restaurant Paisan, Naarderstraat 7 en de Balagan Bar, Groest 16 in Hilversum. Bel 035 544 70 75 of mail info@paisanhilversum.nl. Elke dag open vanaf 10:00." },
   { file: "werkenbij", motif: "bestek-licht", out: "werkenbij", nav: "werkenbij",
     title: "Werken bij Paisan | Vacatures in Hilversum",
     desc: "Werken in de keuken of bediening van Paisan? We staan altijd open voor ervaren, gemotiveerde mensen, zeker richting het zomerseizoen." },
@@ -39,12 +45,12 @@ const pages = [
 ];
 
 const navItems = [
-  ["menu", "Menu"], ["groepen", "Groepen"], ["evenementen", "Evenementen"],
-  ["jeu-de-boules", "Jeu de boules"], ["over-ons", "Over ons"], ["contact", "Contact"],
+  ["restaurant", "Restaurant"], ["balagan-bar", "Balagan Bar"], ["menu", "Menu"], ["groepen", "Groepen"],
+  ["evenementen", "Evenementen"], ["jeu-de-boules", "Jeu de boules"], ["contact", "Contact"],
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org", "@type": "Restaurant",
+const restaurantLd = {
+  "@type": "Restaurant", "@id": SITE + "/restaurant#restaurant",
   name: "Paisan Hilversum", url: SITE + "/",
   image: SITE + "/assets/img/mezze-tafel.jpg",
   telephone: "+31355447075", email: "info@paisanhilversum.nl",
@@ -54,6 +60,14 @@ const jsonLd = {
   openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "10:00" }],
   sameAs: ["https://www.instagram.com/paisan_hilversum/", "https://www.facebook.com/paisanhilversum", "https://www.tiktok.com/@paisan_hilversum", "https://www.linkedin.com/company/restaurant-paisan/"],
 };
+const barLd = {
+  "@type": "BarOrPub", "@id": SITE + "/balagan-bar#bar",
+  name: "Balagan Bar by Paisan", url: SITE + "/balagan-bar",
+  telephone: "+31355447075", email: "info@paisanhilversum.nl",
+  address: { "@type": "PostalAddress", streetAddress: "Groest 16", addressLocality: "Hilversum", addressCountry: "NL" },
+  parentOrganization: { "@id": SITE + "/restaurant#restaurant" },
+};
+const jsonLd = { "@context": "https://schema.org", "@graph": [restaurantLd, barLd] };
 
 const header = (cur) => `
 <a class="skip" href="#main">Naar de inhoud</a>
@@ -75,12 +89,13 @@ const footer = `
     <div class="footer-grid">
       <div>
         <a class="wordmark" href="/"><img src="/assets/img/logo-sand.png" alt="Paisan" width="640" height="287"></a>
-        <p>Bar, restaurant en stadstuin in hartje Hilversum.</p>
+        <p>Restaurant, Balagan Bar en stadstuin in hartje Hilversum.</p>
       </div>
       <div>
         <h2>Bezoek ons</h2>
         <ul>
-          <li>Naarderstraat 7<br>1211 AH Hilversum</li>
+          <li><a href="/restaurant">Restaurant</a><br>Naarderstraat 7, 1211 AH Hilversum</li>
+          <li><a href="/balagan-bar">Balagan Bar</a><br>Groest 16, Hilversum</li>
           <li><a href="tel:+31355447075">035 544 70 75</a></li>
           <li><a href="mailto:info@paisanhilversum.nl">info@paisanhilversum.nl</a></li>
         </ul>
@@ -92,6 +107,7 @@ const footer = `
         <ul>
           <li><a href="${RESERVE}">Reserveren</a></li>
           <li><a href="/groepen#aanvraag">Groepsaanvraag</a></li>
+          <li><a href="/over-ons">Over ons</a></li>
           <li><a href="/werkenbij">Werken bij</a></li>
         </ul>
       </div>
@@ -113,6 +129,7 @@ const footer = `
 <div class="zc-widget-config" data-restaurant="380945"></div>
 <script>
   document.addEventListener('click',function(e){var a=e.target.closest('a[data-zc-action="open"]');if(a&&window.__zcReady){e.preventDefault();}});
+  (function(){var l=new URLSearchParams(location.search).get('locatie'),s=document.getElementById('locatie');if(l&&s){for(const o of s.options){if(o.value===l){s.value=l;}}}})();
   const t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
   t&&t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);t.textContent=o?'Sluiten':'Menu';});
 </script>`;
