@@ -181,11 +181,3 @@ section:not(.alt) .offer{background:var(--cream)}
 .m-page{right:4%;bottom:-24px;height:150%;opacity:.35}
 .m-foot{right:-40px;bottom:-40px;height:320px;opacity:.16}
 @media (max-width:800px){.m-hero{height:45%;opacity:.10}.m-tr,.m-bl{height:180px;opacity:.09}.m-page{height:120%;opacity:.2}}
-
-/* Twee panden */
-.venues{background:var(--paper)}
-.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);margin-top:32px}
-.venue .arch{aspect-ratio:4/3;border-radius:200px 200px var(--radius) var(--radius)}
-.venue h3{font-size:1.9rem;margin-top:20px;margin-bottom:.2em}
-.venue-meta{font-weight:600;color:var(--red);margin-bottom:.8em}
-@media (max-width:800px){.venue-grid{grid-template-columns:1fr}}
