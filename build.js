@@ -27,7 +27,7 @@ const pages = [
     desc: "Brunch met DJ, Dinner Party's met mezzes en meer: dit is er binnenkort te doen bij Paisan in Hilversum." },
   { file: "jeu-de-boules", motif: "boom-licht", out: "jeu-de-boules", nav: "jeu-de-boules",
     title: "Jeu de boules in de stadstuin | Paisan Hilversum",
-    desc: "Reserveer een jeu de boules-baan in onze stadstuin in hartje Hilversum, voor €25 per uur, met een drankje van de buitenbar." },
+    desc: "Reserveer een jeu de boules-baan in onze stadstuin in hartje Hilversum, voor €25 per uur, met een drankje erbij." },
   { file: "over-ons", motif: "wijnvrouw-licht", out: "over-ons", nav: "over-ons",
     title: "Over ons | Paisan Hilversum",
     desc: "Paisan is van Koen en David: een bar, restaurant en stadstuin aan de Naarderstraat waar je binnenkomt als gast en vertrekt als vriend." },
