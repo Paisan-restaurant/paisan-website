@@ -181,3 +181,32 @@ section:not(.alt) .offer{background:var(--cream)}
 .m-page{right:4%;bottom:-24px;height:150%;opacity:.35}
 .m-foot{right:-40px;bottom:-40px;height:320px;opacity:.16}
 @media (max-width:800px){.m-hero{height:45%;opacity:.10}.m-tr,.m-bl{height:180px;opacity:.09}.m-page{height:120%;opacity:.2}}
+
+/* Balagan Bar: avondsfeer */
+.bar-hero{background:var(--ink);color:var(--cream);padding:48px 0 0;overflow:hidden}
+.bar-hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:end}
+.bar-hero h1{color:var(--sand)}
+.bar-hero-copy{padding-bottom:64px}
+.bar-hero .lead{color:var(--cream)}
+.bar-hero .arch{aspect-ratio:3/4;border:10px solid var(--red);border-bottom:0;border-radius:999px 999px 0 0}
+.bar-kicker{font-weight:700;color:var(--sand);font-size:1.1rem;margin-bottom:.4em}
+.bar-dark{background:var(--ink);color:var(--cream)}
+.bar-dark h2,.bar-dark h3{color:var(--sand)}
+.bar-dark .offer{background:#4a2a24;border-top-color:var(--sand)}
+.bar-dark .offer p{color:var(--cream)}
+.bar-dark .btn-line,.bar-hero .btn-line,.bar-teaser .btn-line{color:var(--cream);border-color:var(--cream)}
+.bar-dark .btn-line:hover,.bar-hero .btn-line:hover,.bar-teaser .btn-line:hover{background:var(--cream);color:var(--ink)}
+.bar-teaser{background:var(--ink);color:var(--cream)}
+.bar-teaser h2{color:var(--sand)}
+.bar-teaser .lead,.bar-teaser p{color:var(--cream)}
+.bar-teaser .bar-kicker{color:var(--sand)}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:32px}
+.teaser .arch{aspect-ratio:4/5}
+.teaser h3{margin-top:18px}
+.offers-tight{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:20px 0}
+.offers-tight .offer{background:var(--cream)}
+@media (max-width:900px){.teasers{grid-template-columns:1fr}}
+@media (max-width:800px){.bar-hero .wrap{grid-template-columns:1fr;gap:8px}.bar-hero-copy{padding-bottom:24px}.bar-hero .arch{max-width:420px;width:100%;margin:0 auto}}
+.video-arch{aspect-ratio:4/5;max-width:480px}
+.video-arch video{width:100%;height:100%;object-fit:cover;display:block}
+@media (prefers-reduced-motion:reduce){.video-arch video{display:none}.video-arch{background:url(/assets/video/balagan-tafel.jpg) center/cover}}
