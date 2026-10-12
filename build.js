@@ -15,7 +15,7 @@ const pages = [
     desc: "Mediterrane mezzes om te delen, een grote zonnige stadstuin met jeu de boules en een bar in hartje Hilversum. Elke dag open vanaf 10:00." },
   { file: "balagan-bar", out: "balagan-bar", nav: "balagan-bar",
     title: "De Balagan Bar | DJ, Balagan en groepen in Hilversum",
-    desc: "De Balagan Bar van Paisan aan de Groest 16: het Balagan-menu om te delen, DJ op zaterdag, Boozy Sunday Brunch en een semi-privé plek voor groepen tot 22 personen." },
+    desc: "De Balagan Bar van Paisan aan de Groest 16: het Balagan-menu om te delen, DJ op zaterdag, Boozy Sunday Brunch en drie ruimtes voor groepen tot 70 gasten aan tafel." },
   { file: "menu", motif: "bestek-licht", out: "menu", nav: "menu",
     title: "Menukaart | Paisan Hilversum",
     desc: "Bekijk de dagkaart en avondkaart van Paisan: mediterrane mezzes om te delen, met invloeden uit het Midden-Oosten." },
