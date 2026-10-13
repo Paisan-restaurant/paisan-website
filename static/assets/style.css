@@ -218,3 +218,24 @@ section:not(.alt) .offer{background:var(--cream)}
 }
 .hero-video video{width:100%;height:100%;object-fit:cover;display:block}
 @media (prefers-reduced-motion:reduce){.hero-video video{display:none}.hero-video{background:url(/assets/video/balagan-bar-sfeer.jpg) center/cover}}
+/* Menukaart */
+.menu-thumb{border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(58,30,26,.18);background:var(--sand);aspect-ratio:700/990}
+.menu-thumb img{width:100%;height:100%;object-fit:cover}
+.menu-head{margin:44px 0 16px;color:var(--red);letter-spacing:.08em;text-transform:uppercase;font-size:1.2rem;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;border-bottom:2px solid var(--sand);padding-bottom:8px}
+.menu-head span{text-transform:none;letter-spacing:0;font-weight:600;color:var(--ink-soft);font-size:1rem}
+.dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px 40px}
+.dish h4{margin:0 0 2px;font-size:1.1rem;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.dish h4 b,.menu-feature h3 b,.pr{color:var(--red);font-weight:700;white-space:nowrap}
+.dish p{margin:0;color:var(--ink-soft);font-size:1.02rem}
+.menu-feature{background:var(--sand);border-radius:var(--radius);padding:24px 28px;margin:24px 0 8px;max-width:760px}
+.menu-feature .bar-kicker{color:var(--red-deep);margin:0 0 6px;font-weight:700}
+.menu-feature h3{display:flex;justify-content:space-between;gap:12px;margin-bottom:.3em}
+.menu-feature p{margin:0}
+/* In het nieuws */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:32px}
+.news-item{text-decoration:none;color:var(--ink);display:block}
+.news-item .menu-thumb{aspect-ratio:4/5}
+.news-item .news-meta{margin:16px 0 4px;color:var(--red);font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
+.news-item h3{margin:0 0 .3em}
+.news-item:hover h3{color:var(--red)}
+.dishes + p.muted{margin-top:20px}
