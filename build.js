@@ -40,6 +40,9 @@ const pages = [
   { file: "werkenbij", motif: "bestek-licht", out: "werkenbij", nav: "werkenbij",
     title: "Werken bij Paisan | Vacatures in Hilversum",
     desc: "Werken in de keuken of bediening van Paisan? We staan altijd open voor ervaren, gemotiveerde mensen, zeker richting het zomerseizoen." },
+  { file: "de-plek", motif: "boom-licht", out: "de-plek", nav: "de-plek",
+    title: "De plek | Paisan Hilversum",
+    desc: "Twee panden, een terras en een stadstuin in hartje Hilversum: het restaurant aan de Naarderstraat 7 en de Balagan Bar aan de Groest 16. Kijk binnen." },
   { file: "catering", motif: "bestek-licht", out: "catering", nav: "catering",
     title: "Catering | Paisan Hilversum",
     desc: "Catering van Paisan in Hilversum en omgeving: borrelplanken, een mezze-tafel of de Balagan op locatie. Voor kerstborrels, nieuwjaarsborrels en feesten thuis." },
@@ -52,7 +55,7 @@ const pages = [
 ];
 
 const navItems = [
-  ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["catering", "Catering"], ["evenementen", "Evenementen"],
+  ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["de-plek", "De plek"], ["groepen", "Groepen"], ["catering", "Catering"], ["evenementen", "Evenementen"],
   ["over-ons", "Over ons"], ["contact", "Contact"],
 ];
 

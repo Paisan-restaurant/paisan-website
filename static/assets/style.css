@@ -328,3 +328,33 @@ section.bar-dark .offer{background:#4a2a24}
 .toen-nu figcaption b{color:var(--red);text-transform:uppercase;letter-spacing:.1em;margin-right:8px}
 @media (max-width:640px){.toen-nu{grid-template-columns:1fr}}
 .news{grid-template-columns:repeat(auto-fill,minmax(280px,380px))}
+/* De plek */
+.plek-photo{border-radius:var(--radius);overflow:hidden;background:var(--sand)}
+.plek-photo img{width:100%;height:100%;object-fit:cover}
+.plek-photo.landscape{aspect-ratio:4/3}
+.plek-photo.portrait{aspect-ratio:3/4;max-width:380px;margin-left:auto}
+.moment.flip .plek-photo.portrait{margin-left:0;margin-right:auto}
+.plek-map{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:none}
+.plek-map a{display:flex;flex-direction:column;gap:2px;padding:18px 20px;background:var(--cream);border-radius:var(--radius);text-decoration:none;color:var(--ink);border-top:4px solid var(--red);height:100%}
+.plek-map a:hover{background:var(--sand)}
+.plek-map b{font-size:1.15rem}
+.plek-map span{color:var(--ink-soft)}
+.plek-map .plek-num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--red);color:var(--cream);font-weight:700;margin-bottom:6px}
+@media (max-width:700px){.plek-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.plek-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;grid-auto-flow:dense;gap:14px;margin:8px 0 32px}
+.plek-grid figure{margin:0;border-radius:var(--radius);overflow:hidden;background:var(--sand)}
+.plek-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.plek-grid figure:hover img{transform:scale(1.03)}
+.plek-grid .g-wide{grid-column:span 2;grid-row:span 2}
+.plek-grid .g-tall{grid-row:span 2}
+@media (max-width:800px){.plek-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:160px}}
+@media (prefers-reduced-motion:reduce){.plek-grid img{transition:none}}
+.bar-dark .moment-kicker{color:var(--sand)}
+.bar-dark .lead{color:var(--cream)}
+/* Home: kijk binnen */
+.peek{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:14px;margin:28px 0}
+.peek a{border-radius:var(--radius);overflow:hidden;display:block;background:var(--sand)}
+.peek img{width:100%;height:100%;object-fit:cover}
+.peek a:first-child{grid-row:span 2}
+@media (max-width:700px){.peek{grid-template-columns:1fr 1fr;grid-template-rows:200px 140px 140px}.peek a:first-child{grid-column:span 2;grid-row:auto}}
+.cta .btn-line{color:var(--cream);border-color:var(--cream)}.cta .btn-line:hover{background:var(--cream);color:var(--red-deep)}
