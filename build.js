@@ -9,6 +9,9 @@ const RESERVE_BAR = RESERVE; // Balagan Bar-ticket staat in dezelfde Zenchef
 // Beeld staat voorlopig nog op de Framer-CDN; vóór livegang naar /assets/img verplaatsen.
 const IMG = (id, w = 1600) => `https://framerusercontent.com/images/${id}?scale-down-to=${w}`;
 
+// Versie van de stylesheet, zodat browsers na elke wijziging de nieuwe css ophalen
+const CSS_V = require("crypto").createHash("md5").update(fs.readFileSync(path.join(__dirname, "static/assets/style.css"))).digest("hex").slice(0, 8);
+
 const pages = [
   { file: "index", out: "", nav: "",
     title: "Paisan Hilversum | Mediterraan restaurant en Balagan Bar",
@@ -146,7 +149,7 @@ const layout = (p, body) => `<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700&family=Yellowtail&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=${CSS_V}">
 ${p.file === "index" ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ""}
 </head>
 <body>
