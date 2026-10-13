@@ -37,13 +37,16 @@ const pages = [
   { file: "werkenbij", motif: "bestek-licht", out: "werkenbij", nav: "werkenbij",
     title: "Werken bij Paisan | Vacatures in Hilversum",
     desc: "Werken in de keuken of bediening van Paisan? We staan altijd open voor ervaren, gemotiveerde mensen, zeker richting het zomerseizoen." },
+  { file: "catering", motif: "bestek-licht", out: "catering", nav: "catering",
+    title: "Catering | Paisan Hilversum",
+    desc: "Catering van Paisan in Hilversum en omgeving: borrelplanken, een mezze-tafel of de Balagan op locatie. Voor kerstborrels, nieuwjaarsborrels en feesten thuis." },
   { file: "bedankt", motif: "krans-licht", out: "groepen/bedankt", nav: "groepen", noindex: true,
     title: "Bedankt voor je aanvraag | Paisan Hilversum",
     desc: "We hebben je groepsaanvraag ontvangen." },
 ];
 
 const navItems = [
-  ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["evenementen", "Evenementen"],
+  ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["catering", "Catering"], ["evenementen", "Evenementen"],
   ["over-ons", "Over ons"], ["contact", "Contact"],
 ];
 
@@ -97,6 +100,7 @@ const footer = `
         <ul>
           <li><a href="${RESERVE}">Reserveren</a></li>
           <li><a href="/groepen#aanvraag">Groepsaanvraag</a></li>
+          <li><a href="/catering#aanvraag">Catering aanvragen</a></li>
           <li><a href="/werkenbij">Werken bij</a></li>
         </ul>
       </div>

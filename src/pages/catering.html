@@ -1,0 +1,106 @@
+<div class="page-hero">
+  <div class="wrap">
+    <h1>Catering</h1>
+    <p>De Paisan-tafel bij jou op kantoor of thuis. Mezzes om te delen, voor de kerstborrel, de nieuwjaarsborrel of zomaar een feestje.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap split">
+    <div class="split-media"><div class="arch"><img src="/assets/img/bloemkool.jpg" alt="Geroosterde bloemkool, klaar om te delen" loading="lazy" width="1000" height="1500"></div></div>
+    <div>
+      <h2>Ons eten, op jouw locatie</h2>
+      <p class="lead">Wat je bij ons aan tafel eet, nemen we ook mee naar buiten. Kleurrijke mezzes, dips met warm brood en gerechten die je met elkaar deelt.</p>
+      <p>Geen strak buffet met opscheplepels, maar schalen en planken die midden op tafel staan, zodat iedereen pakt, proeft en doorgeeft. Zo voelt een borrel op kantoor of een feest thuis net een beetje als een avond bij Paisan.</p>
+      <a class="btn btn-red" href="#aanvraag">Vraag catering aan</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Wat we maken</h2>
+    <p>Elk voorstel stemmen we af op je gezelschap, je locatie en je budget. Dit is waar we meestal mee beginnen.</p>
+    <div class="offers">
+      <div class="offer">
+        <h3>Borrelplanken</h3>
+        <div class="price">Op aanvraag</div>
+        <p>Dips, warm brood, ingelegde groenten en kleine hapjes, afgestemd op de grootte van je groep. Voor de vrijdagmiddagborrel of een receptie.</p>
+      </div>
+      <div class="offer">
+        <h3>Mezze-tafel</h3>
+        <div class="price">Op aanvraag</div>
+        <p>Een rijk gevulde tafel met warme en koude mezzes om te delen. Genoeg voor een complete lunch of een uitgebreide borrel.</p>
+      </div>
+      <div class="offer">
+        <h3>Balagan op locatie</h3>
+        <div class="price">Op aanvraag</div>
+        <p>De keuken kiest, jullie delen: onze Balagan als diner op locatie. Voor een eindejaarsdiner met het team of een feest dat ergens over mag gaan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bar-dark">
+  <div class="wrap split flip">
+    <div class="split-media"><div class="arch"><img src="/assets/img/desserts.jpg" alt="Desserts om te delen" loading="lazy" width="1000" height="1500"></div></div>
+    <div>
+      <h2>Deze winter</h2>
+      <p class="lead">December en januari zijn de maanden van de borrels. Wij zorgen voor het eten, jij voor de mensen.</p>
+      <ul>
+        <li>Kerstborrels en eindejaarsdiners op kantoor</li>
+        <li>Nieuwjaarsborrels voor team, klanten of de buurt</li>
+        <li>Kerst of oud en nieuw thuis, zonder zelf in de keuken te staan</li>
+      </ul>
+      <p>De decemberdata gaan snel. Vraag op tijd aan, dan houden we een datum voor je vast.</p>
+      <div class="hero-actions">
+        <a class="btn btn-sand" href="#aanvraag">Plan je wintercatering</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Zo werkt het</h2>
+    <div class="offers">
+      <div class="offer">
+        <h3>1. Vertel wat je zoekt</h3>
+        <p>Laat via het formulier weten wanneer, waar en met hoeveel mensen. Een paar woorden over de gelegenheid helpt ons al op weg.</p>
+      </div>
+      <div class="offer">
+        <h3>2. Je krijgt een voorstel</h3>
+        <p>We sturen je een voorstel op maat, met de gerechten, de hoeveelheden en de prijs. Allergieën en dieetwensen nemen we daarin mee.</p>
+      </div>
+      <div class="offer">
+        <h3>3. Wij maken het klaar</h3>
+        <p>Op de dag zelf staat alles vers klaar. Hoe het bij jou komt, spreken we samen af.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aanvraag" class="alt">
+  <div class="wrap">
+    <h2>Vraag catering aan</h2>
+    <p>Vertel ons wat je in gedachten hebt. We nemen zo snel mogelijk contact met je op met een voorstel.</p>
+    <form class="form" name="cateringaanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/groepen/bedankt">
+      <input type="hidden" name="form-name" value="cateringaanvraag">
+      <p class="hidden"><label>Niet invullen <input name="bot-field"></label></p>
+      <div><label for="c-naam">Naam</label><input id="c-naam" name="naam" autocomplete="name" required></div>
+      <div><label for="c-bedrijf">Bedrijf (optioneel)</label><input id="c-bedrijf" name="bedrijf" autocomplete="organization"></div>
+      <div><label for="c-email">E-mail</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="c-telefoon">Telefoon</label><input id="c-telefoon" name="telefoon" type="tel" autocomplete="tel"></div>
+      <div><label for="c-datum">Datum</label><input id="c-datum" name="datum" type="date" required></div>
+      <div><label for="c-personen">Aantal personen</label><input id="c-personen" name="personen" type="number" min="1" inputmode="numeric" required></div>
+      <div><label for="c-gelegenheid">Gelegenheid</label>
+        <select id="c-gelegenheid" name="gelegenheid"><option>Kerstborrel of eindejaarsdiner</option><option>Nieuwjaarsborrel</option><option>Bedrijfslunch of borrel</option><option>Feest thuis</option><option>Anders</option></select></div>
+      <div><label for="c-interesse">Interesse in</label>
+        <select id="c-interesse" name="interesse"><option>Nog geen idee</option><option>Borrelplanken</option><option>Mezze-tafel</option><option>Balagan op locatie</option></select></div>
+      <div class="full"><label for="c-locatie">Locatie (plaats of adres)</label><input id="c-locatie" name="locatie" autocomplete="street-address"></div>
+      <div class="full"><label for="c-wensen">Wensen of vragen</label><textarea id="c-wensen" name="wensen"></textarea></div>
+      <div class="full"><button class="btn btn-red" type="submit">Verstuur aanvraag</button>
+        <p class="hint">Liever mailen? Stuur je wensen naar <a href="mailto:info@paisanhilversum.nl">info@paisanhilversum.nl</a>.</p></div>
+    </form>
+  </div>
+</section>
