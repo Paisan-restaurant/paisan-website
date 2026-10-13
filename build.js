@@ -40,6 +40,9 @@ const pages = [
   { file: "werkenbij", motif: "bestek-licht", out: "werkenbij", nav: "werkenbij",
     title: "Werken bij Paisan | Vacatures in Hilversum",
     desc: "Werken in de keuken of bediening van Paisan? We staan altijd open voor ervaren, gemotiveerde mensen, zeker richting het zomerseizoen." },
+  { file: "catering", motif: "bestek-licht", out: "catering", nav: "catering",
+    title: "Catering | Paisan Hilversum",
+    desc: "Catering van Paisan in Hilversum en omgeving: borrelplanken, een mezze-tafel of de Balagan op locatie. Voor kerstborrels, nieuwjaarsborrels en feesten thuis." },
   { file: "in-het-nieuws", motif: "krans-licht", out: "in-het-nieuws", nav: "over-ons",
     title: "In het nieuws | Paisan Hilversum",
     desc: "Nieuwsbrieven van Paisan en artikelen waarin we zijn voorgekomen: de nieuwe herfstkaart, de Balagan Bar en wat er op de agenda staat." },
@@ -49,7 +52,7 @@ const pages = [
 ];
 
 const navItems = [
-  ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["evenementen", "Evenementen"],
+  ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["catering", "Catering"], ["evenementen", "Evenementen"],
   ["over-ons", "Over ons"], ["contact", "Contact"],
 ];
 
@@ -103,6 +106,7 @@ const footer = `
         <ul>
           <li><a href="${RESERVE}">Reserveren</a></li>
           <li><a href="/groepen#aanvraag">Groepsaanvraag</a></li>
+          <li><a href="/catering#aanvraag">Catering aanvragen</a></li>
           <li><a href="/in-het-nieuws">In het nieuws</a></li>
           <li><a href="/werkenbij">Werken bij</a></li>
         </ul>
