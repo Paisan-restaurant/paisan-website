@@ -21,7 +21,7 @@ const pages = [
     desc: "De Balagan Bar van Paisan aan de Groest 16: het Balagan-menu om te delen, DJ op zaterdag, Boozy Sunday Brunch en drie ruimtes voor groepen tot 70 gasten aan tafel." },
   { file: "menu", motif: "bestek-licht", out: "menu", nav: "menu",
     title: "Menukaart | Paisan Hilversum",
-    desc: "Bekijk de dagkaart en avondkaart van Paisan: mediterrane mezzes om te delen, met invloeden uit het Midden-Oosten." },
+    desc: "De herfstkaart van Paisan: hummus, mezzes om te delen, pita's, mains en desserts, mediterraan met invloeden uit het Midden-Oosten. Bekijk de lunch-, diner- en Balagan Bar-kaart." },
   { file: "groepen", motif: "wijnglas-licht", out: "groepen", nav: "groepen",
     title: "Groepen en besloten feesten | Paisan Hilversum",
     desc: "Dineren, borrelen of feesten met 20 tot 200 gasten in het restaurant of de Balagan Bar. Mezze- en Balagan-arrangementen vanaf €35 p.p." },
@@ -43,6 +43,9 @@ const pages = [
   { file: "catering", motif: "bestek-licht", out: "catering", nav: "catering",
     title: "Catering | Paisan Hilversum",
     desc: "Catering van Paisan in Hilversum en omgeving: borrelplanken, een mezze-tafel of de Balagan op locatie. Voor kerstborrels, nieuwjaarsborrels en feesten thuis." },
+  { file: "in-het-nieuws", motif: "krans-licht", out: "in-het-nieuws", nav: "over-ons",
+    title: "In het nieuws | Paisan Hilversum",
+    desc: "Nieuwsbrieven van Paisan en artikelen waarin we zijn voorgekomen: de nieuwe herfstkaart, de Balagan Bar en wat er op de agenda staat." },
   { file: "bedankt", motif: "krans-licht", out: "groepen/bedankt", nav: "groepen", noindex: true,
     title: "Bedankt voor je aanvraag | Paisan Hilversum",
     desc: "We hebben je groepsaanvraag ontvangen." },
@@ -104,6 +107,7 @@ const footer = `
           <li><a href="${RESERVE}">Reserveren</a></li>
           <li><a href="/groepen#aanvraag">Groepsaanvraag</a></li>
           <li><a href="/catering#aanvraag">Catering aanvragen</a></li>
+          <li><a href="/in-het-nieuws">In het nieuws</a></li>
           <li><a href="/werkenbij">Werken bij</a></li>
         </ul>
       </div>

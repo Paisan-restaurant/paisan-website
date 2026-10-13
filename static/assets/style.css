@@ -218,3 +218,87 @@ section:not(.alt) .offer{background:var(--cream)}
 }
 .hero-video video{width:100%;height:100%;object-fit:cover;display:block}
 @media (prefers-reduced-motion:reduce){.hero-video video{display:none}.hero-video{background:url(/assets/video/balagan-bar-sfeer.jpg) center/cover}}
+/* Menukaart */
+.menu-thumb{border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(58,30,26,.18);background:var(--sand);aspect-ratio:700/990}
+.menu-thumb img{width:100%;height:100%;object-fit:cover}
+.menu-head{margin:44px 0 16px;color:var(--red);letter-spacing:.08em;text-transform:uppercase;font-size:1.2rem;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;border-bottom:2px solid var(--sand);padding-bottom:8px}
+.menu-head span{text-transform:none;letter-spacing:0;font-weight:600;color:var(--ink-soft);font-size:1rem}
+.dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px 40px}
+.dish h4{margin:0 0 2px;font-size:1.1rem;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.dish h4 b,.menu-feature h3 b,.pr{color:var(--red);font-weight:700;white-space:nowrap}
+.dish p{margin:0;color:var(--ink-soft);font-size:1.02rem}
+.menu-feature{background:var(--sand);border-radius:var(--radius);padding:24px 28px;margin:24px 0 8px;max-width:760px}
+.menu-feature .bar-kicker{color:var(--red-deep);margin:0 0 6px;font-weight:700}
+.menu-feature h3{display:flex;justify-content:space-between;gap:12px;margin-bottom:.3em}
+.menu-feature p{margin:0}
+/* In het nieuws */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:32px}
+.news-item{text-decoration:none;color:var(--ink);display:block}
+.news-item .menu-thumb{aspect-ratio:4/5}
+.news-item .news-meta{margin:16px 0 4px;color:var(--red);font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
+.news-item h3{margin:0 0 .3em}
+.news-item:hover h3{color:var(--red)}
+.dishes + p.muted{margin-top:20px}
+.menu-thumb.landscape{aspect-ratio:900/634}.menu-thumb.landscape img{object-fit:cover;object-position:top}
+.menu-jump{position:sticky;top:72px;z-index:15;background:var(--paper);border-bottom:2px solid var(--sand)}
+.menu-jump .wrap{display:flex;gap:6px 24px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.menu-jump a{font-weight:700;text-decoration:none;color:var(--red)}
+.menu-jump a:hover{text-decoration:underline}
+section[id]{scroll-margin-top:130px}
+.group-menus{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin-top:20px}
+.group-menu{background:var(--paper);border-radius:var(--radius);padding:28px 30px}
+.group-menu .bar-kicker{color:var(--red);margin:0 0 6px}
+.group-menu > h3{display:flex;justify-content:space-between;gap:12px}
+.group-menu > h3 b{color:var(--red)}
+.group-menu > h4{margin:18px 0 4px;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.group-menu > p{margin:0}
+.group-menu.dark{background:var(--red);color:var(--cream)}
+.group-menu.dark .bar-kicker,.group-menu.dark > h4,.group-menu.dark > h3 b{color:var(--sand)}
+.group-menu.dark h3{color:var(--cream)}
+.group-menu .menu-head{margin-top:32px}
+/* Menukaart v2: momenten en kolommen */
+.msec{padding:clamp(56px,7vw,96px) 0}
+.moment{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:center;margin-bottom:clamp(36px,5vw,64px)}
+.moment.flip .moment-media{order:-1}
+.moment.solo{grid-template-columns:1fr;max-width:760px}
+.moment-media .arch{aspect-ratio:4/5;max-width:340px;margin-left:auto}
+.moment.flip .moment-media .arch{margin-left:0;margin-right:auto}
+.moment-kicker{font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-size:.95rem;margin:0 0 8px}
+.moment h2{margin-bottom:.3em}
+@media (max-width:800px){.moment{grid-template-columns:1fr}.moment.flip .moment-media{order:0}.moment-media .arch{max-width:100%;aspect-ratio:3/2;margin:0}}
+.mcols{columns:2 320px;column-gap:64px}
+.mcols.three{columns:3 260px;column-gap:48px}
+.mgroup{break-inside:avoid;margin:0 0 36px}
+.mgroup h3{font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--sand);display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 12px;align-items:baseline}
+.mgroup h3 span{letter-spacing:.02em;text-transform:none;font-weight:600;font-size:.9rem;color:var(--ink-soft)}
+.mi{margin:0 0 12px;break-inside:avoid}
+.mi-top{display:flex;align-items:baseline;gap:8px}
+.mi-name{font-weight:700}
+.mi-dots{flex:1;min-width:16px;border-bottom:2px dotted currentColor;opacity:.3;transform:translateY(-5px)}
+.mi-price{font-weight:700;color:var(--red);white-space:nowrap}
+.mi p{margin:1px 0 0;color:var(--ink-soft);font-size:1rem;line-height:1.4}
+.mfeature{background:var(--sand);color:var(--ink);border-radius:var(--radius);padding:22px 26px;margin-top:24px;max-width:520px;border:2px solid var(--red)}
+.mfeature-kicker{display:inline-block;background:var(--red);color:var(--cream);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;margin:0 0 10px}
+.mfeature h3{display:flex;justify-content:space-between;gap:12px;margin:0 0 .3em;letter-spacing:.06em;text-transform:uppercase;font-size:1.3rem;color:var(--red)}
+.mfeature h3 b{white-space:nowrap}
+.mfeature p{margin:0}
+.on-dark{background:var(--ink);color:var(--cream)}
+.on-dark h2,.on-dark .mgroup h3{color:var(--sand)}
+.on-dark .moment-kicker{color:var(--sand)}
+.on-dark .mgroup h3{border-bottom-color:rgba(232,213,156,.3)}
+.on-dark .mgroup h3 span,.on-dark .mi p{color:rgba(241,228,196,.78)}
+.on-dark .mi-price{color:var(--sand)}
+.on-dark .lead{color:var(--cream)}
+.wine-sec{background:var(--red-deep)}
+.wine-card{background:var(--cream);border-radius:var(--radius);padding:clamp(28px,5vw,64px);outline:1px solid var(--red);outline-offset:-14px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.wine-head{text-align:center;max-width:620px;margin:0 auto 44px}
+.wine-head h2{font-family:"Yellowtail",cursive;font-weight:400;color:var(--red);font-size:clamp(3rem,7vw,4.6rem);letter-spacing:0;margin:0 0 .1em}
+.wine-head p{margin:0 auto}
+.wine-divider{display:flex;align-items:center;gap:18px;margin:12px 0 36px;color:var(--red);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.95rem}
+.wine-divider::before,.wine-divider::after{content:"";flex:1;border-top:2px solid var(--sand)}
+.teasers.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:900px}
+.teaser .bar-kicker{margin:18px 0 2px;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase}
+.teaser .bar-kicker + h3{margin-top:0}
+.bar-dark .teaser p{color:var(--cream)}
+@media (max-width:700px){.teasers.two{grid-template-columns:1fr}}
+section.bar-dark .offer{background:#4a2a24}
