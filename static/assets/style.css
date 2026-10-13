@@ -239,3 +239,4 @@ section:not(.alt) .offer{background:var(--cream)}
 .news-item h3{margin:0 0 .3em}
 .news-item:hover h3{color:var(--red)}
 .dishes + p.muted{margin-top:20px}
+.menu-thumb.landscape{aspect-ratio:900/634}.menu-thumb.landscape img{object-fit:cover;object-position:top}
