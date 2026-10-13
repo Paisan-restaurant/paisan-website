@@ -210,3 +210,9 @@ section:not(.alt) .offer{background:var(--cream)}
 .video-arch{aspect-ratio:4/5;max-width:480px}
 .video-arch video{width:100%;height:100%;object-fit:cover;display:block}
 @media (prefers-reduced-motion:reduce){.video-arch video{display:none}.video-arch{background:url(/assets/video/balagan-tafel.jpg) center/cover}}
+/* Doorkijkfoto's op desktop compacter */
+@media (min-width:801px){
+  .bar-hero .arch{max-width:420px;width:100%;margin-left:auto}
+  .split-media .arch,.video-arch{max-width:400px}
+  .teaser .arch{aspect-ratio:1/1}
+}
