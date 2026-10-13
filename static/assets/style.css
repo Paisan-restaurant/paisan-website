@@ -358,3 +358,4 @@ section.bar-dark .offer{background:#4a2a24}
 .peek a:first-child{grid-row:span 2}
 @media (max-width:700px){.peek{grid-template-columns:1fr 1fr;grid-template-rows:200px 140px 140px}.peek a:first-child{grid-column:span 2;grid-row:auto}}
 .cta .btn-line{color:var(--cream);border-color:var(--cream)}.cta .btn-line:hover{background:var(--cream);color:var(--red-deep)}
+.plek-grid.three{grid-auto-rows:240px}
