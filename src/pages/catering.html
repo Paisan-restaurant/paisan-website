@@ -88,7 +88,6 @@
       <input type="hidden" name="form-name" value="cateringaanvraag">
       <p class="hidden"><label>Niet invullen <input name="bot-field"></label></p>
       <div><label for="c-naam">Naam</label><input id="c-naam" name="naam" autocomplete="name" required></div>
-      <div><label for="c-bedrijf">Bedrijf (optioneel)</label><input id="c-bedrijf" name="bedrijf" autocomplete="organization"></div>
       <div><label for="c-email">E-mail</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
       <div><label for="c-telefoon">Telefoon</label><input id="c-telefoon" name="telefoon" type="tel" autocomplete="tel"></div>
       <div><label for="c-datum">Datum</label><input id="c-datum" name="datum" type="date" required></div>
@@ -98,6 +97,22 @@
       <div><label for="c-interesse">Interesse in</label>
         <select id="c-interesse" name="interesse"><option>Nog geen idee</option><option>Borrelplanken</option><option>Mezze-tafel</option><option>Balagan op locatie</option></select></div>
       <div class="full"><label for="c-locatie">Locatie (plaats of adres)</label><input id="c-locatie" name="locatie" autocomplete="street-address"></div>
+      <div class="full check"><label for="c-zakelijk"><input id="c-zakelijk" name="zakelijk" type="checkbox" value="Ja, zakelijk op factuur"> Zakelijk: graag op factuur</label></div>
+      <fieldset class="full factuur" id="c-factuurgegevens">
+        <legend>Factuurgegevens</legend>
+        <div class="form">
+          <div><label for="cf-bedrijf">Bedrijfsnaam</label><input id="cf-bedrijf" name="bedrijf" autocomplete="organization" data-req></div>
+          <div><label for="cf-tav">Ter attentie van (optioneel)</label><input id="cf-tav" name="factuur_tav"></div>
+          <div class="full"><label for="cf-adres">Straat en huisnummer</label><input id="cf-adres" name="factuur_adres" data-req></div>
+          <div><label for="cf-postcode">Postcode</label><input id="cf-postcode" name="factuur_postcode" data-req></div>
+          <div><label for="cf-plaats">Plaats</label><input id="cf-plaats" name="factuur_plaats" data-req></div>
+          <div><label for="cf-email">E-mail voor de factuur</label><input id="cf-email" name="factuur_email" type="email" data-req></div>
+          <div><label for="cf-kvk">KvK-nummer</label><input id="cf-kvk" name="kvk" inputmode="numeric" data-req></div>
+          <div><label for="cf-btw">Btw-nummer (optioneel)</label><input id="cf-btw" name="btw"></div>
+          <div><label for="cf-ref">Referentie of PO-nummer (optioneel)</label><input id="cf-ref" name="factuur_referentie"></div>
+        </div>
+      </fieldset>
+      <script>(function(){var c=document.getElementById('c-zakelijk'),f=document.getElementById('c-factuurgegevens');function t(){f.hidden=!c.checked;f.querySelectorAll('[data-req]').forEach(function(i){i.required=c.checked})}c.addEventListener('change',t);t()})();</script>
       <div class="full"><label for="c-wensen">Wensen of vragen</label><textarea id="c-wensen" name="wensen"></textarea></div>
       <div class="full"><button class="btn btn-red" type="submit">Verstuur aanvraag</button>
         <p class="hint">Liever mailen? Stuur je wensen naar <a href="mailto:info@paisanhilversum.nl">info@paisanhilversum.nl</a>.</p></div>
