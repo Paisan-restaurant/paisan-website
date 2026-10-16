@@ -328,3 +328,9 @@ section.bar-dark .offer{background:#4a2a24}
 .toen-nu figcaption b{color:var(--red);text-transform:uppercase;letter-spacing:.1em;margin-right:8px}
 @media (max-width:640px){.toen-nu{grid-template-columns:1fr}}
 .news{grid-template-columns:repeat(auto-fill,minmax(280px,380px))}
+.form .check label{display:flex;align-items:center;gap:10px;font-weight:600;cursor:pointer}
+.form .check input{width:20px;height:20px;padding:0;accent-color:var(--red,#992F2F)}
+.form fieldset.factuur{border:2px solid #d9c894;border-radius:var(--radius);padding:18px 20px 22px;margin:0;background:#fbf4e2}
+.form fieldset.factuur[hidden]{display:none}
+.form fieldset.factuur legend{font-weight:700;padding:0 8px}
+.form fieldset.factuur .form{max-width:none}
