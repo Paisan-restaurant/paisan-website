@@ -24,3 +24,10 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Beeldmateriaal voor de offertes in de Paisan-app (foto's, iconen, logo, UVH).
+# CORS open zodat de app ze in een pdf kan tekenen.
+[[headers]]
+  for = "/assets/offertes/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
