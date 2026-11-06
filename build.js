@@ -24,7 +24,7 @@ const pages = [
     desc: "De herfstkaart van Paisan: hummus, mezzes om te delen, pita's, mains en desserts, mediterraan met invloeden uit het Midden-Oosten. Bekijk de lunch-, diner- en Balagan Bar-kaart." },
   { file: "groepen", motif: "wijnglas-licht", out: "groepen", nav: "groepen",
     title: "Groepen en besloten feesten | Paisan Hilversum",
-    desc: "Dineren, borrelen of feesten met 20 tot 200 gasten in het restaurant of de Balagan Bar. Mezze- en Balagan-arrangementen vanaf €35 p.p." },
+    desc: "Dineren, borrelen of feesten met 12 tot 160 gasten in het restaurant of de Balagan Bar. Mezze- en Balagan-arrangementen vanaf €35 p.p." },
   { file: "evenementen", motif: "cocktail-licht", out: "evenementen", nav: "evenementen",
     title: "Evenementen | Paisan Hilversum",
     desc: "Brunch met DJ, Dinner Party's met mezzes en meer: dit is er binnenkort te doen bij Paisan in Hilversum." },
