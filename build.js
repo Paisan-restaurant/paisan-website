@@ -43,6 +43,9 @@ const pages = [
   { file: "catering", motif: "bestek-licht", out: "catering", nav: "catering",
     title: "Catering | Paisan Hilversum",
     desc: "Catering van Paisan in Hilversum en omgeving: borrelplanken, een mezze-tafel of de Balagan op locatie. Voor kerstborrels, nieuwjaarsborrels en feesten thuis." },
+  { file: "kerst", out: "kerst", nav: "kerst",
+    title: "Kerst bij Paisan | Kerstmenu 2026 in Hilversum",
+    desc: "Op 1e en 2e kerstdag een feestelijk vijfgangen-kerstmenu om te delen bij Paisan in Hilversum: 69 p.p., ook vegetarisch, met wijnarrangement voor 34 p.p." },
   { file: "in-het-nieuws", motif: "krans-licht", out: "in-het-nieuws", nav: "over-ons",
     title: "In het nieuws | Paisan Hilversum",
     desc: "Nieuwsbrieven van Paisan en artikelen waarin we zijn voorgekomen: de nieuwe herfstkaart, de Balagan Bar en wat er op de agenda staat." },
@@ -52,7 +55,7 @@ const pages = [
 ];
 
 const navItems = [
-  ["menu", "Menu"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["catering", "Catering"], ["evenementen", "Evenementen"],
+  ["menu", "Menu"], ["kerst", "Kerst"], ["balagan-bar", "Balagan Bar"], ["groepen", "Groepen"], ["catering", "Catering"], ["evenementen", "Evenementen"],
   ["over-ons", "Over ons"], ["contact", "Contact"],
 ];
 
