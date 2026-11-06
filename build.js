@@ -104,7 +104,7 @@ const footer = `
       </div>
       <div>
         <h2>Openingstijden</h2>
-        <ul><li>Elke dag vanaf 10:00 tot laat</li><li>Keuken: vanaf 11:00, ma–vr tot 21:00, za en zo tot 22:00</li><li>Balagan Bar: do t/m zo vanaf 17:00, ma t/m wo op aanvraag voor groepen</li></ul>
+        <ul><li>Elke dag vanaf 10:00 tot laat</li><li>Keuken: vanaf 11:00, ma–vr tot 21:00, za en zo tot 22:00</li><li>Balagan Bar: do t/m zo vanaf 17:00, ma t/m wo op aanvraag voor groepen</li><li><a href="/kerst#feestdagen">Openingstijden feestdagen</a></li></ul>
         <h2 style="margin-top:1em">Direct naar</h2>
         <ul>
           <li><a href="${RESERVE}">Reserveren</a></li>

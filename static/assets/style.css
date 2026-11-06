@@ -374,3 +374,11 @@ section.bar-dark .offer{background:#4a2a24}
 .kerst-hero .btn-line:hover,.cta .btn-line:hover{background:rgba(241,228,196,.12)}
 .bar-dark .teaser p a{color:var(--sand);text-decoration:underline}
 .band .wrap{justify-content:center;text-align:center}
+.feestdagen{list-style:none;padding:0;margin:8px 0 16px;max-width:520px}
+.feestdagen li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid rgba(110,31,31,.18)}
+.feestdagen li b{color:var(--red-deep)}
+.feestdagen li span{text-align:right}
+.feestdagen-box{max-width:620px;margin:0 auto;text-align:left}
+.feestdagen-box h2{text-align:center}
+.feestdagen-box .feestdagen{max-width:none}
+@media(max-width:480px){.feestdagen li{flex-direction:column;gap:2px}.feestdagen li span{text-align:left}}
